@@ -2,7 +2,7 @@
 # Étape 1 
 ## Docker base image
 * On utilise l'image officielle de php:7.2-apache.
-``` docker
+``` dockerfile
 FROM php:7.2-apache
 COPY src /var/www/html/
 ```
@@ -12,6 +12,21 @@ COPY src /var/www/html/
 ## Build
 * Se rendre dans le dossier contenant le dockerfile et les sources voulus pour notre serveur http static
 * lancer cette ligne de commande:
-``` cmd
+```
 docker build -t php-apache .
 ```
+* voilà le résultat qui est attendu :
+
+![](/figures/building_docker_image.png)
+
+## Run
+* Pour run l'image docker utiliser la commande suivante 
+```
+docker run -p <port_souhaité>:80 php-apache
+```
+* Voici le résultat qui est attendu :
+
+![](/figures/run_docker_image.png)
+* Vous pouvez maintenant accéder au contenu via un browser à l'adresse ```localhost:<port souhaité>```
+
+![](/figures/content_run.png)
