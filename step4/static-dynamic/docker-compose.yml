@@ -18,13 +18,11 @@ services:
     labels:
       - "traefik.http.routers.static.rule=Host(`localhost`)"
       - "traefik.http.routers.static.entrypoints=web"
-      - "traefik.http.services.webapp.loadbalancer.server.port=80"
   dynamic:
     build: ./express-image
     scale: 3
     labels:
       - "traefik.http.routers.dynamic.rule=Host(`localhost`)"
-      - "traefik.http.services.dynamic.loadbalancer.server.port=3000"
       - "traefik.http.routers.dynamic.middlewares=dynamic-stripprefix"
       - "traefik.http.middlewares.dynamic-stripprefix.stripprefix.prefixes=/api"
       - "traefik.http.routers.dynamic.rule=Host(`localhost`) && Path(`/api`)"
