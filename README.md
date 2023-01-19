@@ -299,3 +299,19 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.
 ```
 * Pour accéder à Portainer il faut se connecter à ``http://localhost:1717``
 * le choix du port n'a pas une importance majeur pour le changer vous pouvez modifier cette commande : ``--entryPoints.admin.address=:PORT`` dans les command du reverse-proxy
+
+# Execution du docker-compose
+* Pour lancer le docker-compose, ouvrez un terminal dans le dossier racine (où se trouve le fichier ``docker-compose.yml``)
+* Executez ces 2 commandes :
+```text
+docker-compose build
+```
+* Son résultat:
+![](/figures/result-compose-build.png)
+```text
+docker-compose up -d
+```
+* Son résultat: 
+![](/figures/result-compose-up.png)
+* Lorsque vous voulez arreter l'execution de l'app vous pouvez executer cette commande ``docker-compose stop`` pour arreter simplement arrreter les containers ou la commande ``docker-compose down`` pour arreter et supprimer les containers.
+* Après un ``docker-compose stop`` il suffit de faire ``docker-compose start`` pour redemarer les containers.
