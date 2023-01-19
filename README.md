@@ -70,7 +70,6 @@ Pour explorer notre image, il faut exécuter la commande `docker run -it <préfi
 
 ### Etape 2b
 Installation de expressjs avec la commande `npm install express --save` et installation de Express application generator avec la commande `npm install express-generator -g`. Lors de l'installation de express-generator, il peut avoir des vulnérabilités dues à des versions dépreciées. Pour résoudre le problème, il faut exécuter la commande `npm audit fix --force`.
-### TODO: expliquer express et generator
 
 Voici un programme de test de expressjs que l'on peut mettre dans `index.js` :
 
