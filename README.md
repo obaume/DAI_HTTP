@@ -195,7 +195,7 @@ services:
     # The official v2 Traefik docker image
     image: traefik:v2.9
     # Enables the web UI and tells Traefik to listen to docker
-    command: --api.insecure=true --providers.docker  --entryPoints.web.address=:80 --entryPoints.admin.address=:3000
+    command: --api.insecure=true --providers.docker  --entryPoints.web.address=:80 --entryPoints.admin.address=:1717
     ports:
       # The HTTP port
       - "80:80"
