@@ -30,9 +30,6 @@ docker run -p <port_souhaité>:80 php-apache
 * Vous pouvez maintenant accéder au contenu via un browser à l'adresse ```localhost:<port souhaité>```
 
 ![](/figures/content_run.png)
-
-# Rapport labo HTTP Infra
-
 ## Etape 2
 
 ### Etape 2a
