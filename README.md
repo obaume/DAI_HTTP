@@ -203,7 +203,6 @@ services:
     ports:
       # The HTTP port
       - "80:80"
-      # The admin port (enabled by --api.insecure=true)
       # The Web UI (enabled by --api.insecure=true)
       - "8080:8080"
     volumes:
@@ -301,3 +300,5 @@ $(function () {
 ```dockerfile
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce:latest
 ```
+* Pour accéder à Portainer il faut se connecter à ``http://localhost:1717``
+* le choix du port n'a pas une importance majeur pour le changer vous pouvez modifier cette commande : ``--entryPoints.admin.address=:PORT`` dans les command du reverse-proxy
